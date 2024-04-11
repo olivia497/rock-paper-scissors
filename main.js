@@ -31,3 +31,17 @@ function checkWin(){
     document.querySelector('.winLoseTie').innerText = 'You lose'
   };
 };
+
+//Get the bot's choice 
+function rockPaperScissorsCheck(){
+  let random = Math.random()
+
+  if(random <0.33){
+    return 'rock'
+  }else if(random < 0.66){
+    return 'scissors'
+  }else{
+    return 'paper'
+  }
+
+}
