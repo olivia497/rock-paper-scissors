@@ -1,0 +1,26 @@
+h1, .iconPicker, .winLoseTie{
+  display: flex;
+  justify-content: center;
+}
+
+.placeToSeeChoice{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30%;  
+}
+
+/* .winLoseTie{
+  display: flex;
+  justify-content: center;
+  width: min-content;
+  border: 1px solid black;
+} */
+
+footer{
+  margin-top: 30%;
+}
+
+.imageReferences{
+  display: flex;
+  flex-direction: column;
+}
