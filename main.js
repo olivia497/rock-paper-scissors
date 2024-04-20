@@ -18,10 +18,17 @@ scissors.addEventListener('click', () => {
 
 //Check the win of player v bot
 function checkWin(){
-  let botChoice = rockPaperScissorsCheck();
+  let botChoice = rockPaperScissorsCheck()
 
-  document.querySelector('.playerChoice').innerText = playerChoice
-  document.querySelector('.botChoice').innerText = botChoice
+//create an li, add text to li, append li to ul
+  let liPlayer = document.createElement('li');
+  liPlayer.textContent = playerChoice
+  document.getElementById('userHistory').appendChild(liPlayer)
+
+  let liBot = document.createElement('li');
+  liBot.textContent = botChoice
+  document.getElementById('botHistory').appendChild(liBot)
+
 
   if( (playerChoice === 'rock' && botChoice === 'scissors') || (playerChoice === 'paper' && botChoice === 'rock') || (playerChoice === 'scissors' && botChoice === 'paper') ){
     document.querySelector('.winLoseTie').innerText = 'You win'
@@ -36,12 +43,11 @@ function checkWin(){
 function rockPaperScissorsCheck(){
   let random = Math.random()
 
-  if(random <0.33){
+  if(random < 0.33){
     return 'rock'
   }else if(random < 0.66){
     return 'scissors'
   }else{
     return 'paper'
   }
-
 }
