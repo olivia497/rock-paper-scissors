@@ -29,7 +29,10 @@ function checkWin(){
   liBot.textContent = botChoice
   document.getElementById('botHistory').appendChild(liBot)
 
+  getResult();
+};
 
+function getResult(playerChoice, botChoice){
   if( (playerChoice === 'rock' && botChoice === 'scissors') || (playerChoice === 'paper' && botChoice === 'rock') || (playerChoice === 'scissors' && botChoice === 'paper') ){
     document.querySelector('.winLoseTie').innerText = 'You win'
   }else if(playerChoice === botChoice){
